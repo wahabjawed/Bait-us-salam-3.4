@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<link href="css\bootstrap.css" rel="stylesheet">
+<link href="css\custom.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<link href="css/video-js.css" rel="stylesheet">
+<script src="js/video.js"></script>
+<style type="text/css">
+.vjs-default-skin {
+	color: #ffffff;
+}
+.vjs-default-skin .vjs-play-progress, .vjs-default-skin .vjs-volume-level {
+	background-color: #00ebfd
+}
+.vjs-default-skin .vjs-control-bar, .vjs-default-skin .vjs-big-play-button {
+	background: rgba(20,179,28,0.7)
+}
+.vjs-default-skin .vjs-slider {
+	background: rgba(20,179,28,0.2333333333333333)
+}
+.video-js {
+	margin-top: 100px
+}
+</style>
+</head>
+
+<body>
+<div class="lightbox"> <img src="img/close.png" class="close"  />
+  <center>
+    <video id="MY_VIDEO_1" class="ad video-js vjs-default-skin" width="100%" height="280" 
+ data-setup='{ "controls": true, "autoplay": true }'>
+      <source src="http://silversagesstudio.com/apc_video.mp4" type='video/mp4' />
+    </video>
+    
+    
+  </center>
+</div>
+<div class="container">
+  <div class="jumbotron" style="padding-top:5px">
+    <center>
+      <img src="img/top.png" class="img-responsive">
+   
+    
+    </center>
+    <div class="control-container">
+      <button class="btn btn-lg btn-info btn-block btn-width" id="btnAboutUs" type="button" >About Us</button><br>
+      <button class="btn btn-lg btn-info btn-block btn-width" id="btnMobileApp" type="button" >Mobile App</button><br>
+      <button class="btn btn-lg btn-info btn-block btn-width" id="btnFbOne" type="button" >APC</button>
+      <br>
+      <button class="btn btn-lg btn-info btn-block btn-width" id="btnFbTwo" type="button"> APC Youth North America</button>
+        <br>
+      <button class="btn btn-lg btn-info btn-block btn-width" id="btnRegister" type="button"> Register For Newsletter</button>
+         <br>
+      <button class="btn btn-lg btn-info btn-block btn-width" id="btnVideo" type="button"> Watch Video</button>
+    </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript" src="phonegap.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+            app.initialize();
+ 
+        $(document).ready(function () {
+			
+			
+            $('.close').click(function () {
+                $('.lightbox').fadeOut('slow');
+            });
+			
+            $('#btnMobileApp').click(function () {
+				
+				var ref = window.open('http://mobile.dudamobile.com/site/apc_1apc?url=http%3A%2F%2Fapc.com.ng%2F#2634', '_blank', 'location=no');
+               
+            });
+            $('#btnFbOne').click(function () {
+              
+			  var ref = window.open('https://m.facebook.com/APCNigeria?_rdr', '_self', 'location=no');
+			  
+            });
+			$('#btnFbTwo').click(function () {
+            
+			var ref = window.open('https://m.facebook.com/profile.php?id=1425841740973785', '_self', 'location=no');  
+            
+			});
+			$('#btnAboutUs').click(function () {
+            
+			var ref = window.open('about.html', '_self', 'location=no');  
+            
+			});
+			$('#btnRegister').click(function () {
+            
+			var ref = window.open('register.html', '_self', 'location=no');  
+            
+			});
+		
+			$('#btnVideo').click(function () {
+            
+			var ref = window.open('Video.html', '_self', 'location=no');  
+            
+			});
+			
+			
+			
+			
+			
+        });
+
+
+        </script>
+</html>
